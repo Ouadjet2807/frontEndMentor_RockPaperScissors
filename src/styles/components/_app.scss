@@ -6,7 +6,7 @@
     }
     100% {
         grid-template-columns: 33% 33% 33%;
-        margin-left: -230px;
+        margin-left: -16.5vw;
         width: 60vw
     }
 }
@@ -89,10 +89,10 @@
 
         .modalBox {
             background: $white;
-            width: 30vw;
+            width: max-content;
             height: max-content;
             display: flex;
-            padding: 20px 5px 40px 15px;
+            padding: 20px 30px 65px 32px;
             flex-direction: column;
             position: absolute;
             z-index: 5;
@@ -117,7 +117,7 @@
             }
           
             .rules_img {
-                width: 25vw;
+                width: min-content;
             }
         }
     }
@@ -135,7 +135,7 @@
         position: relative;
 
         img {
-            width: 80px;
+            width: 7vw;
         }
 
         .score {
@@ -168,23 +168,29 @@
 
     .game {
         width: 25vw;
-        margin: 50px auto;
+        margin: 13vh auto;
         height: 43vh;
 
         .pentagon {
+            display: flex;
+            justify-content: center;
+
+            .bg {
+                width: 30vw;
+            }
 
             .winner {
                 display: grid;
                 grid-template-columns: 50% 50%;
-                height: 60vh;
+                height: 33vw;
                 width: 79vw;
-                margin-left: -395px;
-                margin-top: -125px;
+                margin-left: -27vw;
+                margin-top: -7.3vw;
                 position: absolute;
 
                 .circles {
-                    width: 600px;
-                    height: 600px;
+                    width: 41vw;
+                    height: 41vw;
                     background: #31335526;
                     border-radius: 50%;
                     display: flex;
@@ -197,8 +203,8 @@
 
                     .circle {
                         background: #31335557;
-                        height: 475px;
-                        width: 475px;
+                        height: 32vw;
+                        width: 32vw;
                         border-radius: 50%;
                         display: flex;
                         align-items: center;
@@ -207,8 +213,8 @@
                         &::before {
                             content: "";
                             background: #313355b5;
-                            height: 350px;
-                            width: 350px;
+                            height: 24vw;
+                            width: 24vw;
                             border-radius: 50%;
                             display: flex;
                         }
@@ -219,6 +225,7 @@
 
             .container {
                 transform: translateY(150px);
+                z-index: 10;
             }
 
             .complete {     
@@ -231,6 +238,7 @@
                     justify-content: center;
                     text-align: center;
                     gap: 20px;
+                    margin-top: -20vh;
                     transform: translateY(50px);
                     animation: fadeUp;
                     animation-duration: 0.8s;
@@ -241,7 +249,7 @@
                         text-transform: uppercase;
                         color: $white;
                         font-weight: 700;
-                        font-size: 50px;
+                        font-size: 3.3vw;
                     }
 
                     button {
@@ -249,7 +257,8 @@
                         color: $darkText;
                         text-transform: uppercase;
                         padding: 10px;
-                        width: 150px;
+                        width: 15vw;
+                        height: 3vw;
                         border: none;
                         border-radius: 5px;
                         font-weight: 600;
@@ -264,14 +273,15 @@
             .choosed {
                 display: grid;
                 grid-template-columns: 45% 10% 45%;
-                height: 60vh;
+                height: 33vw;
                 width: 43vw;
                 margin-left: -105px;
+                margin-top: 0.3vw;
                 position: absolute;
                 z-index: 5;
 
                 h3 {
-                    font-size: 20px;
+                    font-size: 2vw;
                     text-transform: uppercase;
                     letter-spacing: 2px;
                     color: $white;
@@ -296,7 +306,7 @@
                     display: flex;
                     flex-direction: column;
                     grid-column: 1 !important;
-                    gap: 100px;
+                    gap: 7vw;
                     align-items: center;
                     
                 }
@@ -309,7 +319,7 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    gap: 100px;
+                    gap: 7vw;
 
                     
                     .placeholder {
@@ -340,8 +350,8 @@
             }
 
             .choiceBg {
-                width: 105px;
-                height: 105px;
+                width: 7vw;
+                height: 7vw;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -351,8 +361,8 @@
                 
                 .choice {
                     background: $white;
-                    width: 80px;
-                    height: 80px;
+                    width: 5vw;
+                    height: 5vw;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -363,7 +373,7 @@
                     transition: 0.3s ease-in;
 
                         img {
-                            width: 32px;
+                            width: 2vw;
                         }
                     }
 
@@ -397,7 +407,7 @@
 
         #rock {
             margin-top: 45px;
-            margin-left: -37px;
+            margin-left: -155px;
             background: radial-gradient($rockGradient);
             box-shadow: inset 0px -5px 0px -1px #9C1631;
 
@@ -416,7 +426,7 @@
 
         #lizard {
             margin-top: 45px;
-            margin-left: 45px;
+            margin-left: 165px;
             background: radial-gradient($lizardGradient);
             box-shadow: inset 0px -5px 0px -1px #6036AA;
 
@@ -432,9 +442,12 @@
             grid-template-columns: 33% 33% 33%;
             position: absolute;
             gap: 10px 0;
-            margin-top: -42px;
-            margin-left: -24px;
-            width: 30vw; 
+            margin-top: -48px;
+            margin-left: -6px;
+            width: 33vw;
+            height: 52vh;    
+            z-index: 5;
+            justify-items: center;
 
             #spock {
 

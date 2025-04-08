@@ -78,8 +78,11 @@ function App() {
       newScore = score
       setEndGameMessage('No winner')
     }
-    localStorage.setItem('score', newScore)
-    setScore(newScore)
+
+    if(newScore !== undefined) {
+      localStorage.setItem('score', newScore)
+      setScore(newScore)
+    }
 
     setTimeout(() => {
       setGameState("complete")
@@ -103,7 +106,7 @@ function App() {
 
     const storage = localStorage.getItem('score')
 
-    if(storage) {
+    if(storage !== undefined && storage !== null) {
       setScore(storage)
     } else {
       setScore(0)
@@ -137,6 +140,10 @@ function App() {
   }, [houseChoice])
   
 
+  console.log(score);
+  
+
+  
   return (
     <div className="App">
 
@@ -202,7 +209,7 @@ function App() {
                
               </div>
             </div>
-            {gameState === "complete" &&
+            {(gameState === "complete" && result !== "null") &&
             <div className="winner">
               <div className="circles" style={{gridColumn: `${result === "win" ? "1" : "2"}`}}>
                 <div className="circle"></div>
@@ -222,7 +229,7 @@ function App() {
               </div>
             ))}
           </div>
-          <img src="Assets/images/bg-pentagon.svg" className="bg" alt="" style={{display: `${gameState === "complete" ? 'none' : 'block'}`}} />
+          <img src="Assets/images/bg-pentagon.svg" className="bg" alt="" style={{zIndex: `${gameState === "complete" ? '0' : '1'}`}} />
         </div>
       
      
