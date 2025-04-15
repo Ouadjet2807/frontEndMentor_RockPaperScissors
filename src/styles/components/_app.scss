@@ -11,6 +11,7 @@
     }
 }
 
+
 @keyframes winnerReveal {
     0% {
         transform: scale(0);
@@ -628,32 +629,96 @@
                 width: 70vw;
 
 
-                .choosed {
-                    flex-direction: column-reverse;
-                    gap: 15vw;
-                }
+                .winner {
+                    width: 90.5vw;
+                    margin-top: -20vw;
+                    margin-left: -101.3px;
 
-                .complete {
-                    grid-template-columns: 50% 50%;
+                    .circles {
+                        width: 74vw;
+                        height: 74vw;
 
+                        .circle {
+                            height: 56vw;
+                            width: 56vw;
 
-                    .choiceBg {
-                        width: 15vw;
-                        height: 15vw;
-
-                        .choice {
-                            width: 11vw;
-                            height: 11vw;
-
-                            img {
-                              width: 6vw;
+                            &::before {
+                                height: 42vw;
+                                width: 42vw;
                             }
                         }
                     }
+                }
+
+                .choosed {
+                    flex-direction: column-reverse;
+                    gap: 15vw 4vw;
+                    grid-template-columns: 50% 50% !important;
+                    animation: none;
+                    width: 82vw;
+                    margin-top: 10vw;
+                    margin-left: -43.3px;
+
+
+                    .userChoice, .houseChoice {
+                        gap: 17vw;
+                        flex-direction: column-reverse;
+                        width: 40vw;
+                        
+                        .choiceBg {
+                            width: 13vw;
+                            height: 13vw;
+    
+                            .choice {
+                                width: 9.5vw;
+                                height: 9.5vw;
+    
+                                img {
+                                  width: 4vw;
+                                }
+                            }
+                        }
+
+                        h3 {
+                            font-size: 3.5vw;
+                        }
+                    }
+
+                    .houseChoice {
+                        grid-column: 2;
+
+                        .placeholder {
+                            background: linear-gradient(337deg, #141539, transparent);
+                            width: 9.5vw;
+                            height: 9.5vw;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                .complete {
+                    grid-template-columns: 50% 50% !important;
+                    animation: none;
+                    width: 82vw;
+                    margin-left: -43.3px;
+
+
+                   
 
                     .action {
-                        grid-row: 2;
+                        grid-row: 2 !important;
                         grid-column: 1 / 3;
+                        margin-top: 0;
+
+                        h1 {
+                            font-size: 12vw;
+                        }
+
+                        button {
+                            font-size: 4.2vw;
+                            width: 55vw;
+                            height: 13vw;
+                        }
                     }
                 }
 
@@ -684,11 +749,47 @@
                     .choice {
                         width: 18vw;
                         height: 18vw;
+                        box-shadow: inset 0px 2px 0px -1px #B8BFD1;
 
                         img {
                             width: 8vw;
                         }
                     }
+                }
+
+
+                #rock {
+                    margin-top: 4vw;
+                    margin-left: -20vw;
+                    background: radial-gradient($rockGradient);
+                    box-shadow: inset 0px -3px 0px -1px #9C1631;
+        
+                   
+                }
+        
+                #paper {
+                    background: radial-gradient($paperGradient);
+                    box-shadow: inset 0px -3px 0px -1px #2B47C6;
+                    margin-top: -2vw;
+                }
+        
+                #scissors {
+                    background: radial-gradient($scissorsGradient);
+                    box-shadow: inset 0px -3px 0px -1px #C96C16;
+                }
+        
+                #lizard {
+                    margin-top: 4vw;
+                    margin-left: 22vw;
+                    background: radial-gradient($lizardGradient);
+                    box-shadow: inset 0px -3px 0px -1px #6036AA;
+        
+                }
+        
+                #spock {
+                    background: radial-gradient($spockGradient);
+                    box-shadow: inset 0px -3px  0px -1px #2C8CA9;
+                    margin-top: -2vw;
                 }
     
             }
