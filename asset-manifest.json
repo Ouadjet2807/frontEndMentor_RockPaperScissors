@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/frontEndMentor_RockPaperScissors/static/css/main.84b14dcb.css",
+    "main.js": "/frontEndMentor_RockPaperScissors/static/js/main.f24757e2.js",
+    "index.html": "/frontEndMentor_RockPaperScissors/index.html",
+    "main.84b14dcb.css.map": "/frontEndMentor_RockPaperScissors/static/css/main.84b14dcb.css.map",
+    "main.f24757e2.js.map": "/frontEndMentor_RockPaperScissors/static/js/main.f24757e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.84b14dcb.css",
+    "static/js/main.f24757e2.js"
+  ]
+}
